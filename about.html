@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+      container {
+    background-color: #ffffff; /* Latar belakang putih untuk kontras */
+    padding: 20px; /* Ruang dalam */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+/* Judul */
+.container h2 {
+    font-size: 2.5rem; /* Ukuran font judul */
+    margin-bottom: 30px; /* Jarak bawah */
+    color: #dc3545; /* Warna judul */
+    font-weight: bold; /* Font tebal */
+}
+
+/* Kartu */
+.card {
+    transition: transform 0.3s ease; /* Transisi saat hover */
+    border: none; /* Menghapus border default */
+}
+
+.card img {
+    border-top-left-radius: 10px; /* Sudut melengkung atas kiri */
+    border-top-right-radius: 10px; /* Sudut melengkung atas kanan */
+    height: 200px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Memastikan gambar terpotong dengan proporsional */
+}
+
+.card-body {
+    background-color: #f8f9fa; /* Latar belakang yang lebih terang untuk isi kartu */
+    border-radius: 0 0 10px 10px; /* Sudut melengkung bagian bawah */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Ukuran font untuk judul kartu */
+    color: #333; /* Warna teks */
+    font-weight: bold; /* Font tebal */
+}
+
+.card-text {
+    font-size: 1rem; /* Ukuran font untuk teks */
+    color: #666; /* Warna teks lebih pudar */
+}
+
+/* Efek saat hover pada kartu */
+.card:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container h2 {
+        font-size: 2rem; /* Ukuran font judul untuk layar kecil */
+    }
+    .card img {
+        height: 150px; /* Mengurangi tinggi gambar untuk layar kecil */
+    }
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+    <img src="foto/logo.png" alt="Catering Maknyus" style="height: 40px;"> <!-- Set the desired height for the logo -->
+    
+        <a class="navbar-brand" href="#">Catering Maknyus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/profil.html">profil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/galery.html">galery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/about.html">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/our team.html">our team</a>
+            </li>
+          </ul>
+          <a href="#order" class="btn btn-danger">Pesan Sekarang</a>
+      </div>
+    </nav>
+    
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="foto/tuna.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="foto/dimsum.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="foto/sayur.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div class="container mt-5">
+        <h1 class="text-center">Tentang Kami</h1>
+
+        <div class="row">
+            <!-- Blok 1: Visi -->
+            <div class="container mt-5">
+                <h2 class="text-center">Visi Kami</h2>
+                <div id="visionCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div>
+                                <h5>Menjadi Penyedia Katering Terpercaya</h5>
+                                <p>Kami berkomitmen untuk memberikan layanan katering berkualitas tinggi dengan rasa yang luar biasa.</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+            <!-- Blok 2: Misi -->
+            <div class="container mt-5">
+                <h2 class="text-center">Misi Kami</h2>
+                <div id="missionCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div>
+                                <h5>Menyediakan Makanan Berkualitas</h5>
+                                <p>Kami berkomitmen untuk menyediakan makanan yang berkualitas dan segar bagi pelanggan kami.</p>
+                            </div>
+                        </div>
+            <!-- Blok 3: Sejarah -->
+            <div class="container mt-5">
+                <h2 class="text-center">Sejarah Kami</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/carering biasa(5).jpg" class="card-img-top" alt="Sejarah 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Awal Mula</h5>
+                                <p class="card-text">Kami memulai perjalanan kami pada tahun 2010 dengan tujuan untuk memberikan makanan lezat dan berkualitas tinggi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/perkembngan (2).jpg" class="card-img-top" alt="Sejarah 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Perkembangan</h5>
+                                <p class="card-text">Seiring waktu, kami tumbuh dan mulai melayani lebih banyak pelanggan dengan berbagai pilihan menu.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/premium certing(2).jpg" class="card-img-top" alt="Sejarah 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Kualitas Terjamin</h5>
+                                <p class="card-text">Kami berkomitmen untuk menjaga standar kualitas tertinggi dalam setiap hidangan yang kami sajikan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        
+            <!-- Blok 4: Tim -->
+            <div class="container my-5">
+                <h2 class="text-center mb-4">Paket Populer</h2>
+                <div class="row">
+                  <!-- Paket 1 -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="foto/chateringpernikahan (2).jpg" class="card-img-top" alt="Paket Pernikahan">
+                      <div class="card-body">
+                        <h5 class="card-title">Paket Pernikahan</h5>
+                        <p class="card-text">Paket lengkap untuk acara pernikahan, termasuk hidangan pembuka, utama, dan penutup.</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Paket 2 -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="foto/ultah2).jpg" class="card-img-top" alt="Paket Ulang Tahun">
+                      <div class="card-body">
+                        <h5 class="card-title">Paket Ulang Tahun</h5>
+                        <p class="card-text">Pilihan paket spesial untuk acara ulang tahun dengan berbagai pilihan menu menarik.</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Paket 3 -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="foto/pakethemat(2).jpg" class="card-img-top" alt="Paket Keluarga">
+                      <div class="card-body">
+                        <h5 class="card-title">Paket Keluarga</h5>
+                        <p class="card-text">Paket praktis untuk keluarga, cocok untuk acara makan bersama atau kumpul keluarga.</p>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-primary w-100">Lihat Detail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Blok 5: Layanan -->
+            <div class="container mt-5">
+                <h2 class="text-center">Layanan Kami</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/fotochef(2).jpg" class="card-img-top" alt="Layanan 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Katering Pribadi</h5>
+                                <p class="card-text">Kami menyediakan layanan katering pribadi untuk acara kecil seperti pesta ulang tahun, pernikahan, dan acara keluarga.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/paketpremium.jpg" class="card-img-top" alt="Layanan 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Paket Perusahaan</h5>
+                                <p class="card-text">Tawarkan layanan katering untuk acara perusahaan, rapat, dan seminar dengan menu yang disesuaikan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="foto/rendang (2).jpg" class="card-img-top" alt="Layanan 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Menu Spesial</h5>
+                                <p class="card-text">Nikmati menu spesial yang dirancang oleh chef kami untuk acara tertentu atau perayaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blok 7: Kontak -->
+            <div class="container mt-5">
+                <h2 class="text-center">Kontak Kami</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card contact-card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Hubungi Kami</h5>
+                                <p class="card-text">Jika Anda memiliki pertanyaan atau ingin memesan katering, silakan hubungi kami di:</p>
+                                <a href="https://wa.me/6285842146879" class="btn btn-success">
+                                    <i class="fab fa-whatsapp contact-icon"></i> Chat via WhatsApp
+                                </a>
+                                <hr>
+                                <h6>Informasi Kontak Lainnya:</h6>
+                                <p>Email: info@kateringlezat.com</p>
+                                <p>Telepon: (021) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- 1 -->
+<div class="container mt-5">
+  <div class="card chat-box">
+    <!-- Chat Header -->
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">Live Chat</h5>
+      <span class="badge bg-success">Online</span>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="card-body chat-messages">
+      <div class="message my-message">
+        <p>masakanya enak sumpah</p>
+        <span class="time text-muted">10:00 AM</span>
+      </div>
+      <div class="message other-message">
+        <p>saya suka yng burger.</p>
+        <span class="time text-muted">10:01 AM</span>
+      </div>
+    </div>
+
+    <!-- Message Input -->
+    <div class="card-footer">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Type your message...">
+        <button class="btn btn-primary" type="button">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 2 -->
+
+
+<div class="card-group">
+    <div class="card">
+      <img src="foto/burger.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">burger</h5>
+        <p class="card-text">"Setiap gigitan burger adalah cerita rasa yang nggak pernah gagal bikin ketagihan!".</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="foto/sosis.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">sosis</h5>
+        <p class="card-text">enak dan bikin nagih.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="foto/origami.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">origami</h5>
+        <p class="card-text">.makanan khas jepang.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div><div class="card-group">
+    <div class="card">
+      <img src="foto/roti.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">daging </h5>
+        <p class="card-text">gurih dan enak.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="foto/tuna.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">tuna </h5>
+        <p class="card-text">ikan yang segar.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="foto/telor.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">telor</h5>
+        <p class="card-text">bertema telor.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <!-- testi -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">testimoni</h2>
+    <div class="row">
+      <!-- Testimoni 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Layanan katering ini sangat memuaskan! Makanannya lezat dan pelayanannya cepat."</p>
+            <h5 class="card-title">- Worno</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimoni 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Pilihan menu yang variatif dan semua tamu sangat menikmati hidangan."</p>
+            <h5 class="card-title">- Maria zahra</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimoni 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Terima kasih atas layanannya yang profesional dan hidangan yang lezat!"</p>
+            <h5 class="card-title">- Santo</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container my-5">
+    <h2 class="text-center mb-4"></h2>
+    <div class="row">
+      <!-- Testimoni 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Layanan katering ini sangat memuaskan! Makanannya lezat dan pelayanannya cepat."</p>
+            <h5 class="card-title">- Alex</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimoni 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Pilihan menu yang variatif dan semua tamu sangat menikmati hidangan."</p>
+            <h5 class="card-title">- Agus</h5>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimoni 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <p class="card-text">"Terima kasih atas layanannya yang profesional dan hidangan yang lezat!"</p>
+            <h5 class="card-title">- Kipli</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer mt-auto py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Tentang Kami</h5>
+                <p>Kami adalah penyedia layanan katering profesional yang berkomitmen untuk menyajikan hidangan berkualitas tinggi dengan pelayanan terbaik.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Kontak Kami</h5>
+                <ul class="list-unstyled">
+                    <li>📞 Telepon: (021) 1234-5678</li>
+                    <li>📧 Email: info@kateringanda.com</li>
+                    <li>📍 Alamat: Jl. Contoh No. 123, Jakarta</li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Ikuti Kami</h5>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-3">
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    </li>
+                    <li class="me-3">
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    </li>
+                    <li class="me-3">
+                        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    </li>
+                    <li class="me-3">
+                        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <small>&copy; 2024 Katering Anda. Semua hak dilindungi.</small>
+        </div>
+    </div>
+  
+
+    <!-- Bootstrap JS dan jQuery -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</html>

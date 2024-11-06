@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+    /* Container and Title */
+.container {
+    margin-top: 5rem;
+}
+
+h1.text-center {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Gallery Images */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .gallery-img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery-img {
+        margin-bottom: 2rem;
+    }
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
+        
+            <img src="foto/logo.png" alt="Catering Maknyus" style="height: 40px;"> <!-- Set the desired height for the logo -->
+            Catering Maknyus
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/profil.html">profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/galery.html">galery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/about.html">about</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/our team.html">our team</a>
+              </li>
+            </ul>
+            <a href="#order" class="btn btn-danger">Pesan Sekarang</a>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">ini adalah galery kami</h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/premium certing(2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi1.jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/sate(2).jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/rumhan(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi1.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/rendang (2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/fotochef(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/carering biasa(5).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/roti.jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi1.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/premium certing(2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/premium certing(2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/premium certing(2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div><div class="container mt-5">
+        <h1 class="text-center mb-4"></h1>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/premium certing(2).jpg" alt="Gambar 1" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/dimsum.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/nasi tumpeng(2).jpg" alt="Gambar 3" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/chateringpernikahan (2).jpg" alt="Gambar 4" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/daging.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-4 mb-4">
+                <img src="foto/burger.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+            </div>
+        </div>
+    </div>
+    <<div class="container my-5">
+        <h2 class="text-center mb-4">Lokasi Kami</h2>
+        <div class="row">
+          <div class="col-md-12 mb-4">
+            <!-- Embed Google Maps -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.328038043433!2d-122.42674398468137!3d37.78583427975787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c9c0cb577%3A0x34c7c7a5dc9c6c8a!2s1346%20Buchanan%20St%2C%20San%20Francisco%2C%20CA%2094105%2C%20USA!5e0!3m2!1sen!2sid!4v1632923481389!5m2!1sen!2sid"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      
+        <h2 class="text-center mb-4">Video Kami</h2>
+        <div class="video-container mb-5">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+      
+        <!--  -->
+        <footer class="footer mt-auto py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <h5>Tentang Kami</h5>
+                <p>Kami adalah penyedia layanan katering profesional yang berkomitmen untuk menyajikan hidangan berkualitas
+                  tinggi dengan pelayanan terbaik.</p>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5>Kontak Kami</h5>
+                <ul class="list-unstyled">
+                  <li>📞 Telepon: (021) 1234-5678</li>
+                  <li>📧 Email: info@kateringanda.com</li>
+                  <li>📍 Alamat: Jl. Contoh No. 123, Jakarta</li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4">
+                <h5>Ikuti Kami</h5>
+                <ul class="list-unstyled d-flex">
+                  <li class="me-3">
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                  </li>
+                  <li class="me-3">
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                  </li>
+                  <li class="me-3">
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                  </li>
+                  <li class="me-3">
+                    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <small>&copy; 2024 Katering Anda. Semua hak dilindungi.</small>
+            </div>
+          </div>
+      
+      
+      
+      
+      
+      
+      
+          <!--fother  -->
+          <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+          </body>
+      
+          </html>

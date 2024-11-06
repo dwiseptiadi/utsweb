@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Katering Kami</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="profile-catering.css"> <!-- Memuat CSS terpisah -->
+</head>
+<style>
+  /* Profile Section Styles */
+.profile-section {
+    background-color: #f8f9fa; /* Light background color for the profile section */
+}
+
+.profile-card {
+    background-color: #ffffff; /* White background for the card */
+    border: 1px solid #dee2e6; /* Light border around the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.profile-logo {
+    width: 150px; /* Set width for the logo */
+    height: 150px; /* Set height for the logo */
+    object-fit: cover; /* Ensure logo fits nicely within bounds */
+    border: 2px solid #007bff; /* Border color for logo */
+}
+
+h1 {
+    font-size: 2.5rem; /* Font size for the main heading */
+    color: #007bff; /* Primary color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.lead {
+    font-size: 1.25rem; /* Font size for the lead text */
+    color: #6c757d; /* Darker color for the lead text */
+    margin-bottom: 20px; /* Space below the lead text */
+}
+
+.description {
+    font-size: 1rem; /* Font size for the description */
+    color: #343a40; /* Dark text color for better readability */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #495057; /* Dark color for the social media icons */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.social-icons a i {
+    display: inline-block; /* Ensure icons are displayed inline */
+}
+/* General Styles for the About Section */
+#about {
+    background-color: #ffffff; /* White background for contrast */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Title font size */
+    color: #007bff; /* Primary color for titles */
+}
+
+#about .lead {
+    font-size: 1.25rem; /* Lead paragraph font size */
+    color: #6c757d; /* Gray color for text */
+}
+
+/* Card Styles for Photo Gallery */
+.card {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem; /* Rounded corners for cards */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+}
+
+.card-body {
+    text-align: center; /* Center text in card body */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard font size for card text */
+    color: #495057; /* Darker gray for better readability */
+}
+
+/* Styles for the Services Section */
+#services {
+    background-color: #f8f9fa; /* Light gray background for services */
+}
+
+#services h2 {
+    font-size: 2.5rem; /* Title font size */
+    color: #007bff; /* Primary color for titles */
+}
+
+.service-box {
+    background-color: #ffffff; /* White background for service boxes */
+    border-radius: 0.5rem; /* Rounded corners for service boxes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.service-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.service-icon {
+    width: 100px; /* Fixed width for service icons */
+    height: 100px; /* Fixed height for service icons */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.service-title {
+    font-size: 1.5rem; /* Font size for service titles */
+    margin-top: 15px; /* Space above service title */
+    color: #007bff; /* Primary color for service titles */
+}
+
+.service-description {
+    font-size: 1rem; /* Standard font size for descriptions */
+    color: #495057; /* Darker gray for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #about h2, #services h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #about .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .service-icon {
+        width: 80px; /* Smaller service icon size for mobile */
+        height: 80px; /* Smaller service icon size for mobile */
+    }
+
+    .service-title {
+        font-size: 1.25rem; /* Smaller title for mobile */
+    }
+
+    .service-description {
+        font-size: 0.9rem; /* Smaller description for mobile */
+    }
+}
+/* General Styles for the Packages Section */
+#packages {
+    background-color: #f8f9fa; /* Light gray background for the packages section */
+}
+
+#packages h2 {
+    font-size: 2.5rem; /* Title font size */
+    color: #007bff; /* Primary color for titles */
+}
+
+#packages .lead {
+    font-size: 1.25rem; /* Lead paragraph font size */
+    color: #6c757d; /* Gray color for text */
+}
+
+/* Package Item Styles */
+.package-item {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem; /* Rounded corners for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.package-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for package images */
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Font size for package titles */
+    margin-top: 15px; /* Space above package title */
+    color: #007bff; /* Primary color for package titles */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard font size for package descriptions */
+    color: #495057; /* Darker gray for better readability */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff; /* Primary color for buttons */
+    border: none; /* Remove default border */
+    border-radius: 0.25rem; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #packages h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #packages .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Smaller title for mobile */
+    }
+
+    .card-text {
+        font-size: 0.9rem; /* Smaller description for mobile */
+    }
+
+    .card-img-top {
+        height: 150px; /* Smaller image size for mobile */
+    }
+}
+/* General Styles for the Menu Section */
+#menu {
+    background-color: #fff; /* White background for the menu section */
+}
+
+#menu h2 {
+    font-size: 2.5rem; /* Title font size */
+    color: #007bff; /* Primary color for titles */
+}
+
+#menu .lead {
+    font-size: 1.25rem; /* Lead paragraph font size */
+    color: #6c757d; /* Gray color for text */
+}
+
+/* Menu Item Styles */
+.menu-item {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem; /* Rounded corners for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for menu images */
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Font size for menu item titles */
+    margin-top: 15px; /* Space above menu title */
+    color: #007bff; /* Primary color for menu titles */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard font size for menu descriptions */
+    color: #495057; /* Darker gray for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #menu h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #menu .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Smaller title for mobile */
+    }
+
+    .card-text {
+        font-size: 0.9rem; /* Smaller description for mobile */
+    }
+
+    .card-img-top {
+        height: 150px; /* Smaller image size for mobile */
+    }
+}
+/* General Styles for the About Section */
+#about {
+    background-color: #f8f9fa; /* Light gray background for the section */
+    padding-top: 3rem; /* Additional padding at the top */
+    padding-bottom: 3rem; /* Additional padding at the bottom */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Title font size */
+    color: #007bff; /* Primary color for titles */
+}
+
+#about .lead {
+    font-size: 1.25rem; /* Lead paragraph font size */
+    color: #6c757d; /* Gray color for text */
+    margin-bottom: 2rem; /* Space below lead text */
+}
+
+/* Card Styles */
+.card {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem; /* Rounded corners for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+    border-top-left-radius: 0.5rem; /* Round top corners of images */
+    border-top-right-radius: 0.5rem; /* Round top corners of images */
+}
+
+.card-body {
+    padding: 1.5rem; /* Padding inside the card body */
+}
+
+.card-text {
+    font-size: 1rem; /* Standard font size for card text */
+    color: #495057; /* Darker gray for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #about .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .card-img-top {
+        height: 150px; /* Smaller image size for mobile */
+    }
+}
+/* General Styles for the Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9; /* Light gray background for the testimonials section */
+    padding: 3rem 0; /* Padding for top and bottom */
+}
+
+#testimonials h2 {
+    font-size: 2.5rem; /* Font size for the section title */
+    color: #343a40; /* Dark color for the title */
+}
+
+#testimonials .lead {
+    font-size: 1.2rem; /* Font size for lead paragraph */
+    color: #6c757d; /* Medium gray for the lead text */
+    margin-bottom: 3rem; /* Space below lead text */
+}
+
+/* Testimonial Item Styles */
+.testimonial-item {
+    background-color: #ffffff; /* White background for each testimonial */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.testimonial-content {
+    font-size: 1rem; /* Standard font size for testimonial text */
+    color: #495057; /* Dark gray for readability */
+    font-style: italic; /* Italic text for quotes */
+    margin-bottom: 1rem; /* Space below the testimonial text */
+}
+
+.testimonial-author {
+    font-size: 1rem; /* Font size for the author's name */
+    color: #007bff; /* Primary color for the author's name */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #testimonials h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #testimonials .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .testimonial-item {
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+}
+/* General Styles for the Location Section */
+#location {
+    background-color: #ffffff; /* White background for the section */
+    padding: 3rem 0; /* Padding for top and bottom */
+}
+
+#location h2 {
+    font-size: 2.5rem; /* Font size for the section title */
+    color: #343a40; /* Dark color for the title */
+}
+
+#location .lead {
+    font-size: 1.2rem; /* Font size for the lead paragraph */
+    color: #6c757d; /* Medium gray for the lead text */
+    margin-bottom: 2rem; /* Space below lead text */
+}
+
+/* Map Container Styles */
+.map-container {
+    overflow: hidden; /* Ensures the map fits well within the container */
+    border-radius: 0.5rem; /* Rounded corners for the map */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #location h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #location .lead {
+        font-size: 1rem; /* Smaller lead text for mobile */
+    }
+
+    .map-container iframe {
+        height: 300px; /* Adjust height of the map for smaller screens */
+    }
+}
+/* General Styles for the Partners Section */
+#partners {
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    padding: 3rem 0; /* Top and bottom padding */
+    text-align: center; /* Centered text */
+}
+
+/* Partners Section Title */
+#partners h2 {
+    font-size: 2.5rem; /* Font size for the section title */
+    color: #343a40; /* Dark color for the title */
+    margin-bottom: 2rem; /* Space below the title */
+}
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa; /* Light background for footer */
+    padding: 20px 0; /* Padding for the footer */
+}
+
+.footer h5 {
+    font-size: 1.5rem; /* Font size for footer headings */
+    color: #343a40; /* Dark color for footer headings */
+}
+
+.footer p, .footer ul {
+    color: #6c757d; /* Subtle color for footer text */
+}
+
+.footer ul {
+    padding-left: 0; /* Remove padding from the list */
+}
+
+.footer ul li {
+    list-style: none; /* Remove bullet points */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.footer a {
+    color: #007bff; /* Bootstrap primary color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem; /* Adjust heading size for smaller screens */
+    }
+
+    .footer h5 {
+        font-size: 1.25rem; /* Adjust footer heading size for smaller screens */
+    }
+}
+
+
+
+</style>
+<body>
+  
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="foto/telor.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="foto/dimsum.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="foto/sayur.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+      <img src="foto/logo.png" alt="Catering Maknyus" style="height: 40px;"> <!-- Set the desired height for the logo -->
+      Catering Maknyus
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/profil.html">profil</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/galery.html">galery</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/about.html">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/our team.html">our team</a>
+        </li>
+      </ul>
+      <a href="#order" class="btn btn-danger">Pesan Sekarang</a>
+  </div>
+</nav>
+
+
+<!-- Profile Section -->
+<section class="profile-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 text-center">
+        <div class="profile-card p-5 rounded-4 shadow-lg">
+          <img src="foto/logo.png" alt="Logo Katering" class="profile-logo rounded-circle mb-4">
+          <h1 class="display-4 text-primary">Katering Lezat Kami</h1>
+          <p class="lead">Layanan Katering Profesional untuk Setiap Acara</p>
+          <p class="description">
+            Kami menyediakan layanan katering untuk segala jenis acara, dari pernikahan hingga rapat perusahaan. Katering Kami dikenal dengan kualitas makanan yang lezat, bahan segar, dan presentasi yang menarik. Percayakan acara Anda pada kami untuk memberikan pengalaman kuliner yang tak terlupakan!
+          </p>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons mt-4">
+            <a href="https://wa.me/1234567890" target="_blank" class="text-dark me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="https://instagram.com/username" target="_blank" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://facebook.com/username" target="_blank" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/username" target="_blank" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </section> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Katering Lezat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css"> <!-- Memuat CSS terpisah -->
+</head>
+<body>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section py-5 text-center text-white" style="background-image: url('https://example.com/path-to-image.jpg'); background-size: cover; background-position: center;">
+  <div class="container">
+    <h1 class="display-4">Selamat Datang di Katering Lezat</h1>
+    <p class="lead">Layanan Katering Terbaik untuk Segala Acara</p>
+    <a href="#about" class="btn btn-primary btn-lg mt-3">Pelajari Lebih Lanjut</a>
+  </div>
+</section>
+
+<!-- Section Blocks -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="mb-4">cabang kami</h2>
+      <p class="lead">
+        Katering Lezat adalah penyedia layanan katering profesional yang didedikasikan untuk menciptakan pengalaman kuliner tak terlupakan. Kami berkomitmen untuk selalu menghadirkan hidangan berkualitas dengan bahan-bahan segar dan cita rasa istimewa.
+      </p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="foto/cabang1 (2).jpg" class="card-img-top" alt="Foto Katering 1">
+          <div class="card-body">
+            <p class="card-text">Menu pembuka elegan yang disajikan dengan sempurna.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="foto/cabang2(2).jpg" class="card-img-top" alt="Foto Katering 2">
+          <div class="card-body">
+            <p class="card-text">Hidangan utama dengan bahan segar dan rasa yang khas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="foto/cabang3(2).jpg" class="card-img-top" alt="Foto Katering 3">
+          <div class="card-body">
+            <p class="card-text">Sajian penutup lezat untuk pengalaman kuliner sempurna.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="bg-light py-5">
+  
+  <div class="container text-center">
+    <h2 class="mb-4">Layanan Kami</h2>
+    <p class="lead mb-5">
+      Katering Lezat siap melayani kebutuhan kuliner Anda dengan berbagai layanan katering untuk segala jenis acara.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-box p-4 shadow-sm">
+          <img src="foto/chateringpernikahan (2).jpg" alt="Pernikahan" class="service-icon mb-3">
+          <h4 class="service-title">Katering Pernikahan</h4>
+          <p class="service-description">Layanan katering elegan untuk hari istimewa Anda dengan beragam menu pilihan.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-box p-4 shadow-sm">
+          <img src="foto/paketpremium.jpg" alt="Perusahaan" class="service-icon mb-3">
+          <h4 class="service-title">Katering Acara Perusahaan</h4>
+          <p class="service-description">Layanan katering profesional untuk berbagai acara bisnis, seminar, dan lainnya.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-box p-4 shadow-sm">
+          <img src="foto/rumhan(2).jpg" alt="Keluarga" class="service-icon mb-3">
+          <h4 class="service-title">Katering Keluarga</h4>
+          <p class="service-description">Katering untuk acara keluarga dengan menu yang beragam dan rasa yang lezat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Menu Andalan Kami</h2>
+    <p class="lead mb-5">
+      Kami menawarkan berbagai pilihan menu istimewa yang disiapkan dengan bahan-bahan berkualitas dan cita rasa terbaik.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="menu-item card shadow-sm">
+          <img src="foto/nasi tumpeng(2).jpg" class="card-img-top" alt="Nasi Tumpeng">
+          <div class="card-body">
+            <h5 class="card-title">Nasi Tumpeng</h5>
+            <p class="card-text">Hidangan tradisional dengan cita rasa autentik dan tampilan memukau untuk acara spesial Anda.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="menu-item card shadow-sm">
+          <img src="foto/rendang (2).jpg" class="card-img-top" alt="Rendang Daging">
+          <div class="card-body">
+            <h5 class="card-title">Rendang Daging</h5>
+            <p class="card-text">Rendang kaya bumbu dengan daging empuk, cocok untuk pecinta masakan khas Nusantara.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="menu-item card shadow-sm">
+          <img src="foto/sate(2).jpg" class="card-img-top" alt="Sate Ayam">
+          <div class="card-body">
+            <h5 class="card-title">Sate Ayam</h5>
+            <p class="card-text">Sate ayam yang lezat dengan saus kacang khas dan aroma bakaran yang menggugah selera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Paket Populer Kami</h2>
+    <p class="lead mb-5">
+      Pilih dari berbagai paket populer kami yang sudah dipercaya banyak pelanggan untuk berbagai acara spesial.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="package-item card shadow-sm">
+          <img src="foto/carering biasa(5).jpg" class="card-img-top" alt="Paket Hemat">
+          <div class="card-body">
+            <h5 class="card-title">Paket Hemat</h5>
+            <p class="card-text">Pilihan menu terjangkau untuk acara kecil dengan kualitas terbaik dan porsi yang memuaskan.</p>
+            <button class="btn btn-primary mt-3">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="package-item card shadow-sm">
+          <img src="foto/rumhan(2).jpg" class="card-img-top" alt="Paket Keluarga">
+          <div class="card-body">
+            <h5 class="card-title">Paket Keluarga</h5>
+            <p class="card-text">Cocok untuk acara keluarga dengan pilihan menu lengkap yang disukai semua kalangan.</p>
+            <button class="btn btn-primary mt-3">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="package-item card shadow-sm">
+          <img src="foto/paketpremium.jpg" class="card-img-top" alt="Paket Premium">
+          <div class="card-body">
+            <h5 class="card-title">Paket Premium</h5>
+            <p class="card-text">Paket eksklusif dengan menu mewah dan layanan istimewa untuk acara spesial Anda.</p>
+            <button class="btn btn-primary mt-3">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Apa Kata Mereka</h2>
+    <p class="lead mb-5">
+      Testimoni pelanggan kami yang puas dengan layanan dan cita rasa yang kami tawarkan.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-item p-4 shadow-sm">
+          <div class="testimonial-content">
+            <p>"Pelayanan yang luar biasa dan makanan yang lezat! Sangat direkomendasikan untuk acara pernikahan."</p>
+          </div>
+          <div class="testimonial-author mt-3">
+            <strong>- Andi, Jakarta</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-item p-4 shadow-sm">
+          <div class="testimonial-content">
+            <p>"Menu lengkap dan rasa masakan sangat cocok untuk acara keluarga kami. Semua tamu puas."</p>
+          </div>
+          <div class="testimonial-author mt-3">
+            <strong>- Budi, Bandung</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial-item p-4 shadow-sm">
+          <div class="testimonial-content">
+            <p>"Katering terbaik yang pernah kami gunakan! Sate dan rendangnya sangat enak."</p>
+          </div>
+          <div class="testimonial-author mt-3">
+            <strong>- Siti, Surabaya</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Galeri</h2>
+    <p>Lihat hasil kerja dan pengalaman kuliner yang kami tawarkan.</p>
+  </div>
+</section>
+<section id="location" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Lokasi Kami</h2>
+    <p class="lead mb-4">
+      Kunjungi kami di lokasi kami atau hubungi untuk konsultasi lebih lanjut.
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Embedded Google Maps -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.832486888205!2d-122.08424958469245!3d37.42199997982467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb73925e21f77%3A0xd2dca3a6cfa0f939!2sGoogleplex!5e0!3m2!1sen!2sus!4v1600246418354!5m2!1sen!2sus"
+            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">
+<!-- po -->
+<footer class="footer mt-auto py-4">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <h5>Tentang Kami</h5>
+              <p>Kami adalah penyedia layanan katering profesional yang berkomitmen untuk menyajikan hidangan berkualitas tinggi dengan pelayanan terbaik.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+              <h5>Kontak Kami</h5>
+              <ul class="list-unstyled">
+                  <li>📞 Telepon: (021) 1234-5678</li>
+                  <li>📧 Email: info@kateringanda.com</li>
+                  <li>📍 Alamat: Jl. Contoh No. 123, Jakarta</li>
+              </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+              <h5>Ikuti Kami</h5>
+              <ul class="list-unstyled d-flex">
+                  <li class="me-3">
+                      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                  </li>
+                  <li class="me-3">
+                      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                  </li>
+                  <li class="me-3">
+                      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                  </li>
+                  <li class="me-3">
+                      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                  </li>
+                  <li>
+                      <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="text-center mt-4">
+          <small>&copy; 2024 Katering Anda. Semua hak dilindungi.</small>
+      </div>
+  </div>
+
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-ac6g3s5HyBp5+Ikf07w6zSCdfTxFYVAvR+QqWcUE4WeAx/tPvLP+ObroRLLMm2bBBVGZ5js9AYox5XyI2jn7Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
